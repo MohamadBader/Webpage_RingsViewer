@@ -111,15 +111,16 @@ export default function HomePage() {
         navigation
         scrollbar={{ draggable: true }}
         spaceBetween={20}
-        slidesPerView={4}
+        slidesPerView={4} // Default for large screens
+        breakpoints={{
+          1024: { slidesPerView: 4 }, // Laptops
+          768: { slidesPerView: 2 },  // Tablets
+          480: { slidesPerView: 1 },  // Phones (portrait and narrow landscape)
+          320: { slidesPerView: 1 },  // Very narrow phones
+        }}
         observer={true}
         observeParents={true}
         updateOnWindowResize={true}
-        breakpoints={{
-          1024: { slidesPerView: 4 },
-          768: { slidesPerView: 2 },
-          480: { slidesPerView: 1 },
-        }}
         className={styles.carousel}
       >
       {products.map((product, index) => (
