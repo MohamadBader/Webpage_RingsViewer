@@ -106,19 +106,20 @@ export default function HomePage() {
       </div>
 
       {/* Swiper Carousel */}
-      <Swiper
-          modules={[Navigation, Scrollbar]}
-          navigation
-          scrollbar={{ draggable: true }}
-          spaceBetween={20}
-          slidesPerView={4}
-          breakpoints={{
-            1024: { slidesPerView: 4 },
-            768: { slidesPerView: 2 },
-            480: { slidesPerView: 1 },
-          }}
-          className={styles.carousel}
-        >
+            <Swiper
+        modules={[Navigation, Scrollbar]}
+        navigation
+        scrollbar={{ draggable: true }}
+        spaceBetween={20}
+        slidesPerView={4}
+        updateOnWindowResize={true} // Ensure recalculates on resize
+        breakpoints={{
+          1024: { slidesPerView: 4 },
+          768: { slidesPerView: 2 },
+          480: { slidesPerView: 1 },
+        }}
+        className={styles.carousel}
+      >
       {products.map((product, index) => (
         <SwiperSlide key={index}>
           <ProductCard product={product} />
