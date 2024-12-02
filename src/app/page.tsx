@@ -107,18 +107,18 @@ export default function HomePage() {
 
       {/* Swiper Carousel */}
       <Swiper
-      modules={[Navigation, Scrollbar]}
-      navigation
-      scrollbar={{ draggable: true }}
-      spaceBetween={20}
-      slidesPerView={4} // Default for large screens (laptops)
-      breakpoints={{
-        1024: { slidesPerView: 4 }, // 4 products for laptops and desktops
-        768: { slidesPerView: 2 },  // 2 products for tablets
-        480: { slidesPerView: 1 },  // 1 product for phones
-      }}
-      className={styles.carousel}
-    >
+          modules={[Navigation, Scrollbar]}
+          navigation
+          scrollbar={{ draggable: true }}
+          spaceBetween={20}
+          slidesPerView={4}
+          breakpoints={{
+            1024: { slidesPerView: 4 },
+            768: { slidesPerView: 2 },
+            480: { slidesPerView: 1 },
+          }}
+          className={styles.carousel}
+        >
       {products.map((product, index) => (
         <SwiperSlide key={index}>
           <ProductCard product={product} />
