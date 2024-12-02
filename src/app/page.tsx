@@ -112,7 +112,9 @@ export default function HomePage() {
         scrollbar={{ draggable: true }}
         spaceBetween={20}
         slidesPerView={4}
-        updateOnWindowResize={true} // Ensure recalculates on resize
+        observer={true}
+        observeParents={true}
+        updateOnWindowResize={true}
         breakpoints={{
           1024: { slidesPerView: 4 },
           768: { slidesPerView: 2 },

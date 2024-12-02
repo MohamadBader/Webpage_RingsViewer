@@ -231,3 +231,10 @@
     margin-top: 1rem;
   }
 }
+
+@media (max-width: 480px) {
+  .swiper-slide {
+    width: 100% !important; /* Ensure only one product is visible */
+    flex: 0 0 auto;
+  }
+}
