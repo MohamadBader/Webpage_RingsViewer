@@ -1,7 +1,7 @@
-//@ts-nocheck
+
 
 'use client';
-
+import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -44,13 +44,13 @@ export default function HomePage() {
     <div className={styles.container}>
             {/* Header Section */}
             <header className={styles.header}>
-        <a href="/">
+            <Link href="/">
           <img
             src="https://www.kutez.com/_next/image?url=https%3A%2F%2Ffirebasestorage.googleapis.com%2Fv0%2Fb%2Fkutezadmin.appspot.com%2Fo%2Fkutez-webite%252FHeader-Navbar%252Flogo.png%3Falt%3Dmedia%26token%3D64aa5d45-79e9-43ed-b459-34febd0159f5&w=256&q=75"
             alt="Company Logo"
             className={styles.logo}
           />
-        </a>
+        </Link>
       </header>
       <h1 className={styles.title}>Product List</h1>
       
